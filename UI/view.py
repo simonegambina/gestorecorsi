@@ -21,7 +21,6 @@ class View(ft.UserControl):
         self.btnPrintIscrittiCodins = None
         self.btnPrintCDSCodins = None
 
-
     def load_interface(self):
         # title
         self._title = ft.Text("Gestore Corsi - Edizione 2026", color="blue", size=24)
@@ -38,7 +37,8 @@ class View(ft.UserControl):
                                                  on_click=self._controller.handlePrintIscrittiCorsiPD,
                                                  width=300)
 
-        row1 = ft.Row([self.ddPD, self.btnPrintCorsiPD, self.btnPrintIscrittiCorsiPD])
+        row1 = ft.Row([self.ddPD, self.btnPrintCorsiPD, self.btnPrintIscrittiCorsiPD],
+                      alignment=ft.MainAxisAlignment.CENTER)
 
         self.ddCodins = ft.Dropdown(label = "Corso", width=200)
         self._controller.fillddCodins()
